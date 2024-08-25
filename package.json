@@ -9,18 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "assert": "^2.1.0",
+    "axios": "^1.7.5",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "klaviyo-api": "^11.0.0",
+    "next": "14.2.6",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.6"
+    "stream-browserify": "^3.0.0",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/uuid": "^10.0.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.6",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.6"
+    "typescript": "^5",
+    "webpack": "^5.94.0"
   }
 }
