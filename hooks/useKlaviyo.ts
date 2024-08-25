@@ -9,7 +9,7 @@ export default function useKlaviyo() {
     // State para profiles
     const [profiles, setProfiles] = useState<Profile[]>([]);
 
-    console.log(process.env.NEXT_PUBLIC_KLAVIYO_PRIVATE_API_KEY);
+    console.log(process.env.KLAVIYO_PRIVATE_API_KEY);
 
     const INITIAL_STATE_PROFILE: Profile = {
         id: "",
