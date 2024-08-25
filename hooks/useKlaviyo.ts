@@ -9,6 +9,8 @@ export default function useKlaviyo() {
     // State para profiles
     const [profiles, setProfiles] = useState<Profile[]>([]);
 
+    
+
     const INITIAL_STATE_PROFILE: Profile = {
         id: "",
         attributes: {
@@ -29,6 +31,8 @@ export default function useKlaviyo() {
             external_id: ''
         }
     };
+    //state para perfil buscado
+    const [searchedProfile, setSearchedProfile] = useState<Profile>(INITIAL_STATE_PROFILE)
 
     // State para nuevo usuario
     const [profile, setProfile] = useState<Profile>(INITIAL_STATE_PROFILE);
@@ -82,6 +86,18 @@ export default function useKlaviyo() {
         }
     };
 
+    // Función para obtener un perfil
+    const getProfile = async (profile_id: string) => {
+        try {
+            const response = await axios.get(`/api/profiles/getProfile?profile_id=${profile_id}`);
+            const data = response.data;
+            console.log(data.data);
+            setSearchedProfile(data);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
     // Ejecutar getProfiles al montar el componente
     useEffect(() => {
         getProfiles();
@@ -90,6 +106,8 @@ export default function useKlaviyo() {
     return {
         profiles,
         profile,
-        createProfile
+        createProfile,
+        getProfile,
+        searchedProfile
     };
 }

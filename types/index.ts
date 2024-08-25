@@ -11,14 +11,14 @@ export type Profile = {
             zip: string
         },
         properties: {
-            fav_category: string,
-            fav_color: string
+            fav_category?: string,
+            fav_color?: string
         },
         email: string,
         phone_number: string,
         first_name: string,
         last_name: string,
-        external_id: string
+        external_id?: string
     }
 }
 
