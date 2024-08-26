@@ -8,7 +8,7 @@ export const ProfileList = () => {
     const { profiles } = useKlaviyo();
     return (
         <>
-            <div className="overflow-y-scroll max-h-96">
+            <div className="overflow-y-scroll max-h-96 mb-5">
                 <div className=" space-y-5">
                     {profiles.map((profile) => (
                         profile && profile.id && (

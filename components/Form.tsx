@@ -54,7 +54,7 @@ export const Form = () => {
                         id="first_name"
                         value={formData.first_name}
                         onChange={handleChange}
-                        placeholder="PUBLIC API KEY"
+                        placeholder="Ingrese el nombre del Profile"
                         className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                 </div>
@@ -67,7 +67,7 @@ export const Form = () => {
                         id="last_name"
                         value={formData.last_name}
                         onChange={handleChange}
-                        placeholder="PRIVATE API KEY"
+                        placeholder="Ingrese el apellido del Profile"
                         className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                 </div>
